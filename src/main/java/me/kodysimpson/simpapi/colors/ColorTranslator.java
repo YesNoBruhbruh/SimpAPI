@@ -35,6 +35,10 @@ public class ColorTranslator {
         return ChatColor.translateAlternateColorCodes('&', hexColored);
     }
 
+    public static String decolor(@NotNull String text){
+        return ChatColor.stripColor(text);
+    }
+
     /**
      * @param text The text with color codes that you want to turn into a TextComponent
      * @return the TextComponent with hex colors and regular colors
