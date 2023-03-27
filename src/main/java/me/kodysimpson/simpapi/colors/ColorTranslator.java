@@ -3,6 +3,7 @@ package me.kodysimpson.simpapi.colors;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.TextComponent;
+import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.regex.Matcher;
@@ -37,6 +38,12 @@ public class ColorTranslator {
 
     public static String decolor(@NotNull String text){
         return ChatColor.stripColor(text);
+    }
+
+    public static void msgPlayer(Player player, String... strings) {
+        for (String string : strings) {
+            player.sendMessage(translateColorCodes(string));
+        }
     }
 
     /**
