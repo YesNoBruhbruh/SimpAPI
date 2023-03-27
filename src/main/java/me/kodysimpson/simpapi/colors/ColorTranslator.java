@@ -40,12 +40,6 @@ public class ColorTranslator {
         return ChatColor.stripColor(text);
     }
 
-    public static void msgPlayer(Player player, String... strings) {
-        for (String string : strings) {
-            player.sendMessage(translateColorCodes(string));
-        }
-    }
-
     /**
      * @param text The text with color codes that you want to turn into a TextComponent
      * @return the TextComponent with hex colors and regular colors
