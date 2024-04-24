@@ -87,7 +87,7 @@ public abstract class Menu implements InventoryHolder {
     }
 
     /**
-     * This will fill all of the empty slots with "filler glass"
+     * This will fill all the empty slots with "filler glass"
      */
     //Helpful utility method to fill all remaining slots with "filler glass"
     public void setFillerGlass() {
